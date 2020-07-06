@@ -1,0 +1,67 @@
+/* bright orange color from infura #ff6b4a */
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background-color: #F7F8E2;
+}
+
+nav {
+  height: 20vh;
+  width: 100vw;
+  background-color: #3A3C42;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  /* padding: 5px; */
+}
+
+nav::after {
+  background-color: #F7F8E2;
+  content: "";
+  height: 100px;
+  width: 100vw;
+  position: absolute;
+  top: 15vh;
+  border-radius: 35px 35px 0 0;
+  z-index: 1;
+}
+
+#logo {
+  /* position: relative; */
+  /* top: 3vh; */
+  /* left: 3vw; */
+  background-image: url('./assets/ledger-logo.svg');
+  background-repeat: no-repeat;
+  height: 75px;
+  width: 300px;
+}
+
+#nav-btn-wrapper {
+  height: 75px;
+  /* width: 200px; */
+  width: fit-content;
+  border: 1px solid red;
+  /* change this to fit the search bar when it expands */
+  display: flex;
+}
+
+.nav-btn {
+  height: 75px;
+  width: 75px;
+}
+
+#search-btn {
+  background-image: url('./assets/search.svg');
+}
+
+main {
+  border: 1px solid red;
+  height: 70vh;
+  position: relative;
+  top: 5vh;
+  z-index: 100;
+}
