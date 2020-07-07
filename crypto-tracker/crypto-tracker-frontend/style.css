@@ -31,9 +31,6 @@ nav::after {
 }
 
 #logo {
-  /* position: relative; */
-  /* top: 3vh; */
-  /* left: 3vw; */
   background-image: url('./assets/ledger-logo.svg');
   background-repeat: no-repeat;
   height: 75px;
@@ -44,9 +41,6 @@ nav::after {
   height: 50px;
   width: 150px;
   justify-content: space-around;
-  /* width: fit-content; */
-  /* border: 1px solid red; */
-  /* change this to fit the search bar when it expands */
   display: flex;
 }
 
@@ -68,11 +62,18 @@ nav::after {
   background-image: url('./assets/plus.svg');
 }
 
-
 main {
   border: 1px solid red;
   height: 70vh;
   position: relative;
   top: 5vh;
   z-index: 100;
+}
+
+#modal-create-new {
+  display: none;
+  height: 100px;
+  width: 100px;
+  border: 1px solid red;
+  transition: .05s ease-in-out;
 }
