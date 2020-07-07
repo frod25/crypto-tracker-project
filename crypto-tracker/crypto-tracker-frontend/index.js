@@ -1,22 +1,18 @@
 const search = document.querySelector("#search-btn")
 const searchInput = document.querySelector("#search-input")
-const searchInputContainer = document.querySelector("#search-input-container")
+const searchInputInner = document.querySelector("#search-input-inner")
+const searchContainer = document.querySelector("#search-input-outer")
+
 const addNew = document.querySelector("#new-btn")
 const modalCreateNew = document.querySelector("#modal-create-new")
 const main = document.querySelector('main')
 const cardsContainer = document.querySelector('#modal-card-container')
 
 search.addEventListener('click', e => {
-  if (searchInputContainer.style.width == "350px") {
-    searchInput.style.width = "0px"
-    searchInputContainer.style.width = "0px"
-    searchInputContainer.style.display = "none"
-    searchInputContainer.classList = ""
+  if (searchContainer.style.width == "350px") {
+    searchContainer.style.width = "0px"
   } else {
-    searchInputContainer.classList = "search-input-pseudo"
-    searchInputContainer.style.width = "350px"
-    searchInput.style.width = "350px"
-    searchInputContainer.style.display = "block"
+    searchContainer.style.width = "350px"
   }
 })
 
