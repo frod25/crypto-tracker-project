@@ -41,22 +41,33 @@ nav::after {
 }
 
 #nav-btn-wrapper {
-  height: 75px;
-  /* width: 200px; */
-  width: fit-content;
-  border: 1px solid red;
+  height: 50px;
+  width: 150px;
+  justify-content: space-around;
+  /* width: fit-content; */
+  /* border: 1px solid red; */
   /* change this to fit the search bar when it expands */
   display: flex;
 }
 
 .nav-btn {
-  height: 75px;
-  width: 75px;
+  height: 50px;
+  width: 50px;
+  background-color: #ff6b4a;
+  background-size: 60%;
+  background-repeat: no-repeat;
+  background-position: center;
+  border-radius: 5px;
 }
 
 #search-btn {
   background-image: url('./assets/search.svg');
 }
+
+#new-btn {
+  background-image: url('./assets/plus.svg');
+}
+
 
 main {
   border: 1px solid red;
