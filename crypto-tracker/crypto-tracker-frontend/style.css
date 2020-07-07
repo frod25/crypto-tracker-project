@@ -1,0 +1,79 @@
+/* bright orange color from infura #ff6b4a */
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background-color: #F7F8E2;
+}
+
+nav {
+  height: 20vh;
+  width: 100vw;
+  background-color: #3A3C42;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  /* padding: 5px; */
+}
+
+nav::after {
+  background-color: #F7F8E2;
+  content: "";
+  height: 100px;
+  width: 100vw;
+  position: absolute;
+  top: 15vh;
+  border-radius: 35px 35px 0 0;
+  z-index: 1;
+}
+
+#logo {
+  background-image: url('./assets/ledger-logo.svg');
+  background-repeat: no-repeat;
+  height: 75px;
+  width: 300px;
+}
+
+#nav-btn-wrapper {
+  height: 50px;
+  width: 150px;
+  justify-content: space-around;
+  display: flex;
+}
+
+.nav-btn {
+  height: 50px;
+  width: 50px;
+  background-color: #ff6b4a;
+  background-size: 60%;
+  background-repeat: no-repeat;
+  background-position: center;
+  border-radius: 5px;
+}
+
+#search-btn {
+  background-image: url('./assets/search.svg');
+}
+
+#new-btn {
+  background-image: url('./assets/plus.svg');
+}
+
+main {
+  border: 1px solid red;
+  height: 70vh;
+  position: relative;
+  top: 5vh;
+  z-index: 100;
+}
+
+#modal-create-new {
+  display: none;
+  height: 100px;
+  width: 100px;
+  border: 1px solid red;
+  transition: .05s ease-in-out;
+}
