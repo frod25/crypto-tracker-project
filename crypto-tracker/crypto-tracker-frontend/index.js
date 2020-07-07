@@ -6,7 +6,7 @@ const modalCreateNew = document.querySelector("#modal-create-new")
 search.addEventListener('click', e => {
   // on click, toggle to something else
   if (searchInput.style.width == "0px") {
-    searchInput.style.width = "200px"
+    searchInput.style.width = "250px"
     searchInput.style.padding = "0 10px"
     search.style.borderRadius = "0 5px 5px 0"
     // also give the searchbtn a border-radius of something
@@ -15,7 +15,11 @@ search.addEventListener('click', e => {
     searchInput.style.width = "0px"
     search.style.borderRadius = "5px"
   }
+})
 
+searchInput.addEventListener('input', e => {
+  // our filter function goes here so it narrows down
+  // this doesn't need to submit anything
 })
 
 addNew.addEventListener('click', e => {
