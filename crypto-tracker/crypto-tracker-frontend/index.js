@@ -1,19 +1,22 @@
 const search = document.querySelector("#search-btn")
 const searchInput = document.querySelector("#search-input")
+const searchInputContainer = document.querySelector("#search-input-container")
 const addNew = document.querySelector("#new-btn")
 const modalCreateNew = document.querySelector("#modal-create-new")
+const main = document.querySelector('main')
+const cardsContainer = document.querySelector('#modal-card-container')
 
 search.addEventListener('click', e => {
-  // on click, toggle to something else
-  if (searchInput.style.width == "0px") {
-    searchInput.style.width = "250px"
-    searchInput.style.padding = "0 10px"
-    search.style.borderRadius = "0 5px 5px 0"
-    // also give the searchbtn a border-radius of something
-  } else {
-    searchInput.style.padding = "0px"
+  if (searchInputContainer.style.width == "350px") {
     searchInput.style.width = "0px"
-    search.style.borderRadius = "5px"
+    searchInputContainer.style.width = "0px"
+    searchInputContainer.style.display = "none"
+    searchInputContainer.classList = ""
+  } else {
+    searchInputContainer.classList = "search-input-pseudo"
+    searchInputContainer.style.width = "350px"
+    searchInput.style.width = "350px"
+    searchInputContainer.style.display = "block"
   }
 })
 
@@ -23,9 +26,13 @@ searchInput.addEventListener('input', e => {
 })
 
 addNew.addEventListener('click', e => {
-  if (modalCreateNew.style.display == 'none') {
-    modalCreateNew.style.display = 'block'
-  } else {
+
+  if (modalCreateNew.style.display == 'block') {
+    cardsContainer.style.display = 'block'
     modalCreateNew.style.display = 'none'
+    // also toggle the show all here
+  } else {
+    cardsContainer.style.display = 'none'
+    modalCreateNew.style.display = 'block'
   }
 })

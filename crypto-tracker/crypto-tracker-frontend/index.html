@@ -6,25 +6,48 @@
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <script type="text/javascript" src="index.js" defer></script>
   <link rel="stylesheet" href="style.css">
-  <title>ledger</title>
+  <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500;700&display=swap" rel="stylesheet">
+  <title>Ledger</title>
 
 </head>
 <body>
   <nav>
-    <div id="logo"></div>
+    <div id="logo-container">
+      <div id="logo">
+        <h1>ledger</h1>
+      </div>
+    </div>
     <div id="nav-btn-wrapper">
-      <div id="search-input-container">
+      <div id="search-input-container" class="search-input-pseudo">
         <input type="text" id="search-input" placeholder="Seach for a cryptocurrency">
       </div>
       <div class="nav-btn" id="search-btn"></div>
-      <!-- wrap the input in here too -->
       <div class="nav-btn" id="new-btn"></div>
     </div>
   </nav>
   <main>
+    <section id="modal-card-container">
+      <h2>You don't have any cryptocurrency yet</h2>
+    </section>
     <section id="modal-create-new">
-      <!-- form here -->
+      <form action="">
+        <h2>Track a Cryptocurrency</h2>
+        <div id="new-inner">
+          <input type="text" id="new__cryptocurrency" class="create-new-input charcoal-underline" placeholder="Project Name">
+          <input type="text" id="new__ticker-symbol" class="create-new-input charcoal-underline" placeholder="Symbol">
+          <input type="text" id="new__ticker-image" class="create-new-input charcoal-underline" placeholder="Ticker Image">
+          <input type="text" id="new__landing_page" class="create-new-input charcoal-underline" placeholder="Landing Page">
+          <input type="text" id="new__status" class="create-new-input charcoal-underline" placeholder="Status">
+          <label for="color" id="labelhere" class="charcoal-underline">
+            <span>Card Color</span>
+            <input type="color" id="new__card-color" class="create-new-input" placeholder="Color">
+          </label>
+          <input type="number" id="new__balance" class="create-new-input charcoal-underline" placeholder="balance">
+          <input type="submit" id="new__submit" placeholder="Submit">
+        </div>
+      </form>
     </section>
   </main>
+  <!-- perhaps add a footer? -->
 </body>
 </html>
