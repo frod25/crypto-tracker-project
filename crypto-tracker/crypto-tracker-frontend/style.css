@@ -39,7 +39,7 @@ nav::after {
 
 #nav-btn-wrapper {
   height: 50px;
-  width: 150px;
+  /* width: 150px; */
   justify-content: space-around;
   display: flex;
 }
@@ -56,6 +56,15 @@ nav::after {
 
 #search-btn {
   background-image: url('./assets/search.svg');
+  transition: all .5s ease-in-out 0s;
+}
+
+#search-input {
+  border: none;
+  outline: none;
+  height: 50px;
+  width: 0px;
+  transition: all .5s ease-in-out 0s;
 }
 
 #new-btn {
@@ -75,5 +84,5 @@ main {
   height: 100px;
   width: 100px;
   border: 1px solid red;
-  transition: .05s ease-in-out;
+  transition: .5s ease-in-out;
 }
