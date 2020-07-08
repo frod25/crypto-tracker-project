@@ -4,6 +4,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <script src="./src/fetch.js"></script>
   <script type="text/javascript" src="index.js" defer></script>
   <link rel="stylesheet" href="style.css">
   <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500;700&display=swap" rel="stylesheet">
@@ -20,7 +21,9 @@
     <div id="nav-btn-wrapper">
       <div id="search-input-outer">
         <div id="search-input-inner">
-          <input type="text" id="search-input" placeholder="Seach for a cryptocurrency">
+          <form action="" id="search-form">
+            <input type="text" id="search-input" placeholder="Seach for a cryptocurrency">
+          </form>
         </div>
       </div>
       <div class="nav-btn" id="search-btn"></div>
@@ -29,10 +32,10 @@
   </nav>
   <main>
     <section id="modal-card-container">
-      <h2>You don't have any cryptocurrency yet</h2>
+      <div id="modal-scroll"></div>
     </section>
     <section id="modal-create-new">
-      <form action="">
+      <form id="createNewForm" action="">
         <h2>Track a Cryptocurrency</h2>
         <div id="new-inner">
           <input type="text" id="new__cryptocurrency" class="create-new-input charcoal-underline" placeholder="Project Name">
