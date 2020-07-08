@@ -221,7 +221,7 @@ let renderCoinCards = (items) => {
 const renderMainView = () => {
   getAllCoins()
   .then(coins => {
-    coins.forEach(renderCoinCard)
+    renderCoinCards(coins)
     searchEventListener(coins)
   })
 }
