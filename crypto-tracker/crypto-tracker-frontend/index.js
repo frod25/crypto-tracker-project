@@ -113,8 +113,29 @@ let coinView = (coin) => {
     <div id="card-view-header">
       <img src="${coin.ticker_image}" alt="${coin.name} logo" class="card-view-img">
       <div class="coin-header-wrapper">
-        <h2 class="card-view-ticker_symbol bold-text">${coin.ticker_symbol}</h2>
-        <h2 class="card-view-coin_name">${coin.name}</h2>
+        <h2 class="bold-text" id="card-view-ticker_symbol">${coin.ticker_symbol}</h2>
+        <h2 id="card-view-coin_name">${coin.name}</h2>
+      </div>
+    </div>
+    <div class="coin-view-body">
+      <div class="coin-view-body-wrapper" id="view__amt-held">
+        <h2 class="bold">Amount Held</h2>
+        <p>${coin.balance}</p>
+      </div>
+      <div class="coin-view-body-wrapper" id="view__price">
+        <h2 class="bold">Price</h2>
+        <p>250.21</p>
+      </div>
+      <div class="coin-view-body-wrapper" id="view__market-cap">
+        <h2 class="bold">Market Cap</h2>
+        <p>1.53b</p>
+      </div>
+      <div class="coin-view-body-wrapper" id="view__status">
+        <h2 class="bold">Status</h2>
+        <p>${coin.status}</p>
+      </div>
+      <div class="coin-view-body-wrapper" id="delete">
+        <input type="submit" placeholder="delete" name="delete">
       </div>
     </div>
   </div>
