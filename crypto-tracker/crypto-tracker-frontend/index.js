@@ -103,9 +103,15 @@ const coins = [
 ]
 
 let coinView = (coin) => {
-  cardsContainer.innerHTML = `
-    <h2>${coin.name}</h2>
-  `
+  main.innerHTML = ""
+  let cardView = document.createElement('section')
+  cardView.className = "modal-card-view"
+  cardView.style.backgroundColor = `#${coin.color}`
+  // cardsContainer.innerHTML = `
+  //
+  // `
+  main.appendChild(cardView)
+  // main.innerHTML = cardView
 }
 
 let renderCoinCard = (coin) => {
@@ -119,9 +125,9 @@ let renderCoinCard = (coin) => {
   </div>
   `
   cardsContainer.appendChild(card)
-  // card.addEventListener('click', e => {
-  //   coinView(coin)
-  // })
+  card.addEventListener('click', e => {
+    coinView(coin)
+  })
 }
 
 let filterCoin = (arr, str) => {
