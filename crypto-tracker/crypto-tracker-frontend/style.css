@@ -24,12 +24,14 @@ h2 {
 
 nav {
   padding-top: 2vh;
-  height: 15vh;
-  width: 100vw;
+  height: 13vh;
+  width: 90vw;
+  margin: 0 auto;
   display: flex;
   flex-direction: row;
   justify-content: space-between;
   align-items: center;
+  /* border: 1px solid red; */
 }
 
 #logo-container {
@@ -107,7 +109,7 @@ nav {
 
 #search-input-outer {
   /* border: 1px solid red; */
-  width: 350px;
+  width: 0;
   transition: all .7s ease-in-out;
   height: 80px;
   position: relative;
@@ -152,29 +154,6 @@ main {
   z-index: 100;
 }
 
-#modal-card-container {
-  width: 90vw;
-  background-color: #FBFBFC;
-  height: 70vh;
-  /* border: 1px solid red; */
-  border: 3px solid #3A3C42;
-  margin: 0 auto;
-  position: relative;
-}
-
-#modal-card-container::before {
-  content: "";
-  position: absolute;
-  width: 90vw;
-  height: 70vh;
-  /* border: 1px solid red; */
-  top: 15px;
-  left: 15px;
-  border: 3px solid #3A3C42;
-  background-color: #ff6b4a;
-  z-index: -1;
-}
-
 #modal-create-new {
   display: none;
   height: 40vh;
@@ -182,7 +161,7 @@ main {
   margin: 0 auto;
 }
 
-form {
+#createNewForm {
   background-color: #FBFBFC;
   border: 3px solid #3A3C42;
   position: relative;
@@ -192,7 +171,7 @@ form {
   margin: 0 auto;
 }
 
-form::before {
+#createNewForm::before {
   content: "";
   padding: 5vh 0;
   position: absolute;
@@ -289,4 +268,78 @@ form::before {
   height: 50px;
   font-size: 1em;
   position: relative;
+}
+
+/* Card Styling Begins Here */
+
+#modal-card-container {
+  width: 90vw;
+  background-color: #FBFBFC;
+  height: 70vh;
+  border: 3px solid #3A3C42;
+  margin: 0 auto;
+  position: relative;
+  display: grid;
+  place-items: center;
+}
+
+#modal-card-container::before {
+  content: "";
+  position: absolute;
+  width: 90vw;
+  height: 70vh;
+  top: 15px;
+  left: 15px;
+  border: 3px solid #3A3C42;
+  background-color: #ff6b4a;
+  z-index: -1;
+}
+
+#modal-scroll {
+  height: 90%;
+  width: 95%;
+  /* border: 1px solid red; */
+  display: grid;
+  grid-template-columns: repeat(5, auto);
+  grid-column-gap: 10px;
+  overflow-x: scroll;
+  justify-content: space-around;
+  /* padding: 0 10px; */
+  padding-top: 1vh;
+}
+
+.coin-card {
+  height: 125px;
+  width: 230px;
+  position: relative;
+  display: grid;
+  place-items: center;
+  transition: all .2s ease-in-out;
+}
+
+.coin-card::before {
+  content: "";
+  position: absolute;
+  width: 230px;
+  height: 125px;
+  border: 3px solid #3A3C42;
+  background-color: transparent;
+  top: 5px;
+  right: 5px;
+}
+
+.coin-card:hover {
+  transform: scale(1.05);
+}
+
+.coin-inner {
+  height: fit-content;
+  width: 60%;
+  display: flex;
+  align-items:center;
+  justify-content: space-around;
+}
+
+.card-img {
+  height: 40px;
 }
