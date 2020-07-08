@@ -107,10 +107,24 @@ let coinView = (coin) => {
   let cardView = document.createElement('section')
   cardView.className = "modal-card-view"
   cardView.style.backgroundColor = `#${coin.color}`
-  // cardsContainer.innerHTML = `
-  //
-  // `
+  cardView.innerHTML = `
+  <div class="exit-btn"></div>
+  <div id="card-view-inner">
+    <div id="card-view-header">
+      <img src="${coin.ticker_image}" alt="${coin.name} logo" class="card-view-img">
+      <div class="coin-header-wrapper">
+        <h2 class="card-view-ticker_symbol bold-text">${coin.ticker_symbol}</h2>
+        <h2 class="card-view-coin_name">${coin.name}</h2>
+      </div>
+    </div>
+  </div>
+  `
   main.appendChild(cardView)
+  let exit = main.querySelector('.exit-btn')
+  exit.addEventListener('click', e => {
+    // on click, clear main
+    // render the original card page
+  })
   // main.innerHTML = cardView
 }
 
