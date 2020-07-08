@@ -8,12 +8,10 @@
 
 Coin.destroy_all
 
-Coin.create(name: 'Bitcoin', ticker_symbol: 'BTC', ticker_image: 'https://s2.coinmarketcap.com/static/img/coins/32x32/1.png', landing_page: 'https://bitcoin.org/en/', status: 'mature', color: 'red', balance: 4.564)
-Coin.create(name: 'Ethereum', ticker_symbol: 'ETH', ticker_image: 'https://s2.coinmarketcap.com/static/img/coins/32x32/1027.png', landing_page: 'https://ethereum.org/en/', status: 'mature', color: 'green', balance: 3.034)
-Coin.create(name: 'Monero', ticker_symbol: 'XMR', ticker_image: 'https://s2.coinmarketcap.com/static/img/coins/32x32/328.png', landing_page: 'https://web.getmonero.org/', status: 'stable', color: 'blue', balance: 9.384 )
+Coin.create(name: 'Bitcoin', ticker_symbol: 'BTC', ticker_image: 'https://upload.wikimedia.org/wikipedia/commons/thumb/4/46/Bitcoin.svg/1200px-Bitcoin.svg.png', landing_page: 'https://bitcoin.org/en/', status: 'mature', color: 'ff9900', balance: 4.564)
+Coin.create(name: 'Ethereum', ticker_symbol: 'ETH', ticker_image: 'https://upload.wikimedia.org/wikipedia/commons/thumb/6/6f/Ethereum-icon-purple.svg/440px-Ethereum-icon-purple.svg.png', landing_page: 'https://ethereum.org/en/', status: 'mature', color: '3c3c3d', balance: 3.034)
+Coin.create(name: 'Monero', ticker_symbol: 'XMR', ticker_image: 'https://cryptologos.cc/logos/monero-xmr-logo.png?v=003', landing_page: 'https://web.getmonero.org/', status: 'stable', color: 'ff6600', balance: 9.384 )
 # Coin.create(name: '', ticker_symbol: '', ticker_image: '', landing_page: '', status: '', color: '', balance: )
 # Coin.create(name: '', ticker_symbol: '', ticker_image: '', landing_page: '', status: '', color: '', balance: )
-
-puts Coin.all
 
 puts "Seeded!"
