@@ -23,7 +23,9 @@ function getOneCoin(coinId){
 }
 
 function deleteCoin(coinId){
-    return fetch(baseUrl + `${coinId}`)
+    return fetch(baseUrl + `${coinId}`, {
+        method: "DELETE"
+    })
     .then(res => res.json())
 }
 
