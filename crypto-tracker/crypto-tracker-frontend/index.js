@@ -16,6 +16,7 @@ const cardsContainer = document.querySelector('#modal-scroll')
 let renderCoinCard = (coin) => {
   let card = document.createElement('div')
   card.className = "coin-card"
+  card.id = `card-${coin.id}`
   card.setAttribute('style', `border: 3px solid #${coin.color}`)
   card.innerHTML = `
   <div class="coin-inner">
@@ -74,6 +75,7 @@ let coinView = (coin) => {
   `
   main.appendChild(modalCardView)
   let exit = main.querySelector('.exit-btn')
+<<<<<<< HEAD
   // exit.addEventListener('click', e => {
   //   console.log(e)
   //   modalCardContainer.style.display = 'grid'
@@ -85,9 +87,28 @@ let coinView = (coin) => {
     }
   })
 
+=======
+  exit.addEventListener('click', e => {
+    modalCardContainer.style.display = 'grid'
+    modalCardView.style.display = "none"
+  })
+
+  const del = modalCardView.querySelector('[name="delete"]')
+  del.addEventListener('click', e => {
+    deleteCoinAndRemoveCard(coin.id)
+  })
+  // main.innerHTML = cardView
+>>>>>>> c56e85d4cd6b2e7e6d4ea61ccaf951b8f291ac12
 }
 
 
+const deleteCoinAndRemoveCard = (coinId) => {
+  deleteCoin(coinId)
+  modalCardContainer.style.display = 'grid'
+  modalCardView.style.display = "none"
+  const coinCard = cardsContainer.querySelector(`#card-${coinId}`)
+  cardsContainer.removeChild(coinCard)
+}
 
 
 search.addEventListener('click', e => {
@@ -148,7 +169,7 @@ let renderCoinCards = (items) => {
 const renderMainView = () => {
   getAllCoins()
   .then(coins => {
-    coins.forEach(renderCoinCard)
+    renderCoinCards(coins)
     searchEventListener(coins)
   })
 }
