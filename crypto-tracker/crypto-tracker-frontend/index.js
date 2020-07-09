@@ -36,7 +36,7 @@ let renderCoinCard = (coin) => {
 let coinView = (coin) => {
   modalCardView.style.display = 'block'
   modalCardView.innerHTML = `
-  <div id="${coin.id}" class="card-pseudo-wrapper" style="background-color: #${coin.color}">
+  <div id="${coin.id}" class="card-pseudo-wrapper" style="background-color: ${coin.color}">
     <div class="exit-btn"></div>
     <div id="card-view-inner">
       <div id="card-view-header">
@@ -49,23 +49,23 @@ let coinView = (coin) => {
       <div class="coin-view-body">
         <div class="coin-view-body-wrapper editable" id="view__amt-held">
           <h2 class="bold">Amount Held</h2>
-          <p>${coin.balance}</p>
+          <p id="coin__amtHeld">${coin.balance}</p>
         </div>
-        <div class="coin-view-body-wrapper editable" id="view__status">
+        <div class="coin-view-body-wrapper" id="view__value">
           <h2 class="bold">Value</h2>
           <p>$500</p>
         </div>
-        <div class="coin-view-body-wrapper editable" id="view__price">
+        <div class="coin-view-body-wrapper" id="view__price">
           <h2 class="bold">Price</h2>
           <p>250.21</p>
         </div>
-        <div class="coin-view-body-wrapper editable" id="view__market-cap">
+        <div class="coin-view-body-wrapper" id="view__market-cap">
           <h2 class="bold">Market Cap</h2>
           <p>1.53b</p>
         </div>
         <div class="coin-view-body-wrapper editable" id="view__status">
           <h2 class="bold">Status</h2>
-          <p>${coin.status}</p>
+          <p id="coin__status">${coin.status}</p>
         </div>
         <div class="coin-view-body-wrapper" id="view__delete">
           <input type="submit" placeholder="delete" name="delete" value="DELETE">
@@ -75,10 +75,20 @@ let coinView = (coin) => {
   </div>
   `
   main.appendChild(modalCardView)
+
+
   let exit = main.querySelector('.exit-btn')
-  exit.addEventListener('click', e => {
-    modalCardContainer.style.display = 'grid'
-    modalCardView.style.display = "none"
+  let amtHeld = main.querySelector('#coin__amtHeld')
+  let coinStatus = main.querySelector("#coin__status")
+  main.addEventListener('click', e => {
+    if (e.target === exit) {
+        modalCardContainer.style.display = 'grid'
+        modalCardView.style.display = "none"
+    } else if (e.target === amtHeld) {
+      amtHeld.contentEditable = true
+    } else if (e.target === coinStatus) {
+      coinStatus.contentEditable = true
+    }
   })
 
   const del = modalCardView.querySelector('[name="delete"]')
@@ -86,6 +96,10 @@ let coinView = (coin) => {
     deleteCoinAndRemoveCard(coin.id)
   })
   // main.innerHTML = cardView
+}
+
+const coinChange = (coin, attr) => {
+
 }
 
 
