@@ -7,6 +7,7 @@ const searchInputInner = document.querySelector("#search-input-inner")
 const searchContainer = document.querySelector("#search-input-outer")
 
 const addNew = document.querySelector("#new-btn")
+const createNewForm = document.querySelector("#createNewForm")
 const modalCardContainer = document.querySelector("#modal-card-container")
 const modalCreateNew = document.querySelector("#modal-create-new")
 const modalCardView = document.querySelector("#modal-card-view")
@@ -17,10 +18,10 @@ let renderCoinCard = (coin) => {
   let card = document.createElement('div')
   card.className = "coin-card"
   card.id = `card-${coin.id}`
-  card.setAttribute('style', `border: 3px solid #${coin.color}`)
+  card.setAttribute('style', `border: 3px solid ${coin.color}`)
   card.innerHTML = `
   <div class="coin-inner">
-    <img src="${coin.ticker_image}" class="card-img" alt="">
+    <img src="${coin.ticker_image}" class="card-img" alt="${coin.name}">
     <h2 class="card-ticker">${coin.ticker_symbol}</h2>
   </div>
   `
@@ -143,6 +144,25 @@ addNew.addEventListener('click', e => {
     modalCardContainer.style.display = 'none'
     modalCreateNew.style.display = 'block'
   }
+})
+
+createNewForm.addEventListener('submit', e => {
+  e.preventDefault()
+  const newCoinObj = {
+    name: e.target.name.value,
+    tickerSymbol: e.target.tickerSymbol.value,
+    tickerImage: e.target.tickerImage.value,
+    landingPage: e.target.landingPage.value,
+    status: e.target.status.value,
+    color: e.target.color.value,
+    balance: e.target.balance.value
+  }
+  createNewCoin(newCoinObj)
+  .then(newCoin => {
+    renderCoinCard(newCoin)
+    modalCreateNew.style.display = 'none'
+    modalCardContainer.style.display = 'grid'
+  })
 })
 
 let renderCoinCards = (items) => {

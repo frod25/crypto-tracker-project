@@ -38,16 +38,16 @@
       <form id="createNewForm" action="">
         <h2>Track a Cryptocurrency</h2>
         <div id="new-inner">
-          <input type="text" id="new__cryptocurrency" class="create-new-input charcoal-underline" placeholder="Project Name">
-          <input type="text" id="new__ticker-symbol" class="create-new-input charcoal-underline" placeholder="Symbol">
-          <input type="text" id="new__ticker-image" class="create-new-input charcoal-underline" placeholder="Ticker Image">
-          <input type="text" id="new__landing_page" class="create-new-input charcoal-underline" placeholder="Landing Page">
-          <input type="text" id="new__status" class="create-new-input charcoal-underline" placeholder="Status">
+          <input type="text" id="new__cryptocurrency" class="create-new-input charcoal-underline" name="name" placeholder="Project Name">
+          <input type="text" id="new__ticker-symbol" class="create-new-input charcoal-underline" name="tickerSymbol" placeholder="Symbol">
+          <input type="text" id="new__ticker-image" class="create-new-input charcoal-underline" name="tickerImage" placeholder="Ticker Image">
+          <input type="text" id="new__landing_page" class="create-new-input charcoal-underline" name="landingPage" placeholder="Landing Page">
+          <input type="text" id="new__status" class="create-new-input charcoal-underline" name="status" placeholder="Status">
           <label for="color" id="labelhere" class="charcoal-underline">
             <span>Card Color</span>
-            <input type="color" id="new__card-color" class="create-new-input" placeholder="Color">
+            <input type="color" id="new__card-color" class="create-new-input" name="color" placeholder="Color">
           </label>
-          <input type="number" id="new__balance" class="create-new-input charcoal-underline" placeholder="balance">
+          <input type="number" step="any" min="0" id="new__balance" class="create-new-input charcoal-underline" name="balance" placeholder="balance">
           <input type="submit" id="new__submit" placeholder="Submit">
         </div>
       </form>
