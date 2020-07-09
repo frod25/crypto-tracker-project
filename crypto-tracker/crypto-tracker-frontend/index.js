@@ -63,7 +63,7 @@ let coinView = (coin) => {
         </div>
         <div class="coin-view-body-wrapper" id="view__market-cap">
           <h2 class="bold">Market Cap</h2>
-          <p>1.53b</p>
+          <p id="marketCapVal">1.53b</p>
         </div>
         <div class="coin-view-body-wrapper editable" id="view__status">
           <h2 class="bold">Status</h2>
@@ -132,9 +132,11 @@ const calcValue = (balance, price) => {
 const renderPriceInfo = (coinData, balance) => {
   const dollarValue = modalCardView.querySelector("#dollarValue")
   const coinPrice = modalCardView.querySelector("#coinPrice")
+  const marketCapVal = modalCardView.querySelector("#marketCapVal")
   const roundedPrice = (Math.round((parseFloat(coinData.price) + Number.EPSILON) * 100) / 100).toFixed(2)
   coinPrice.textContent = `$${roundedPrice}`
   dollarValue.textContent = `$${calcValue(balance, roundedPrice)}`
+  marketCapVal.textContent = `${coinData.market_cap}`
 }
 
 // const updateCoinData = ()
