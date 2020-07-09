@@ -48,9 +48,9 @@ let coinView = (coin) => {
       <div class="coin-view-body">
         <div class="coin-view-body-wrapper editable" id="view__amt-held">
           <h2 class="bold">Amount Held</h2>
-          <p>${coin.balance}</p>
+          <p id="coin__amtHeld">${coin.balance}</p>
         </div>
-        <div class="coin-view-body-wrapper" id="view__status">
+        <div class="coin-view-body-wrapper" id="view__value">
           <h2 class="bold">Value</h2>
           <p>$500</p>
         </div>
@@ -64,7 +64,7 @@ let coinView = (coin) => {
         </div>
         <div class="coin-view-body-wrapper editable" id="view__status">
           <h2 class="bold">Status</h2>
-          <p>${coin.status}</p>
+          <p id="coin__status">${coin.status}</p>
         </div>
         <div class="coin-view-body-wrapper" id="view__delete">
           <input type="submit" placeholder="delete" name="delete" value="DELETE">
@@ -74,23 +74,20 @@ let coinView = (coin) => {
   </div>
   `
   main.appendChild(modalCardView)
+
+
   let exit = main.querySelector('.exit-btn')
-<<<<<<< HEAD
-  // exit.addEventListener('click', e => {
-  //   console.log(e)
-  //   modalCardContainer.style.display = 'grid'
-  //   modalCardView.style.display = "none"
-  // })
+  let amtHeld = main.querySelector('#coin__amtHeld')
+  let coinStatus = main.querySelector("#coin__status")
   main.addEventListener('click', e => {
     if (e.target === exit) {
-      console.log('yeah')
+        modalCardContainer.style.display = 'grid'
+        modalCardView.style.display = "none"
+    } else if (e.target === amtHeld) {
+      amtHeld.contentEditable = true
+    } else if (e.target === coinStatus) {
+      coinStatus.contentEditable = true
     }
-  })
-
-=======
-  exit.addEventListener('click', e => {
-    modalCardContainer.style.display = 'grid'
-    modalCardView.style.display = "none"
   })
 
   const del = modalCardView.querySelector('[name="delete"]')
@@ -98,7 +95,10 @@ let coinView = (coin) => {
     deleteCoinAndRemoveCard(coin.id)
   })
   // main.innerHTML = cardView
->>>>>>> c56e85d4cd6b2e7e6d4ea61ccaf951b8f291ac12
+}
+
+const coinChange = (coin, attr) => {
+
 }
 
 
