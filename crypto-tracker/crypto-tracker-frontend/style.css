@@ -309,7 +309,7 @@ main {
   z-index: -1;
 }
 
-#card-pseudo-wrapper {
+.card-pseudo-wrapper {
   width: 50vw;
   /* background-color: #FBFBFC; */
   height: 50vh;
@@ -320,7 +320,7 @@ main {
   place-items: center;
 }
 
-#card-pseudo-wrapper::after {
+.card-pseudo-wrapper::after {
   content: "";
   position: absolute;
   width: 50vw;

@@ -34,7 +34,7 @@ let renderCoinCard = (coin) => {
 let coinView = (coin) => {
   modalCardView.style.display = 'block'
   modalCardView.innerHTML = `
-  <div id="card-pseudo-wrapper" style="background-color: #${coin.color}">
+  <div id="${coin.id}" class="card-pseudo-wrapper" style="background-color: #${coin.color}">
     <div class="exit-btn"></div>
     <div id="card-view-inner">
       <div id="card-view-header">
@@ -75,6 +75,7 @@ let coinView = (coin) => {
   main.appendChild(modalCardView)
   let exit = main.querySelector('.exit-btn')
   exit.addEventListener('click', e => {
+    console.log(e)
     modalCardContainer.style.display = 'grid'
     modalCardView.style.display = "none"
   })
