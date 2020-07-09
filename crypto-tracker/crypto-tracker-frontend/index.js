@@ -92,7 +92,6 @@ let coinView = (coin) => {
     } else if (e.target == coinStatusP) {
       console.log(e.target.textContent)
       let attr = Object.keys(coin).find(key => coin[key] == e.target.textContent)
-      // console.log(attr)
       coinChange(coin, coinStatusP, attr)
     }
   })
@@ -107,7 +106,16 @@ let coinView = (coin) => {
       let obj = {}
       obj[attr] = e.target.value
       if (e.key === 'Enter') {
-        updateCoin(coin.id, obj)
+        updateCoin(coin.id, obj).then(newObj => {
+          elementParent.innerHTML = `
+            <p id="coin__status">${newObj.status}</p>
+          `
+          const coinCard = cardsContainer.querySelector(`#card-${coin.id}`)
+          cardsContainer.removeChild(coinCard)
+          renderCoinCard(newObj)
+          console.log(newObj.id)
+        })
+
       }
     })
   }
