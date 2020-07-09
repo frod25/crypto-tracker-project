@@ -13,7 +13,7 @@ class CoinsController < ApplicationController
             landing_page: params[:landingPage],
             status: params[:status],
             color: params[:color],
-            balance: params[:balance]
+            balance: params[:balance].to_f
         )
         if coin.valid?
             render json: coin
