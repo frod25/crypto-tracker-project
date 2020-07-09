@@ -349,8 +349,8 @@ main {
   z-index: 1;
 }
 
-.exit-btn:active {
-  color: red;
+.exit-btn:hover {
+  transform: rotate(90deg);
 }
 
 #card-view-inner {
@@ -494,4 +494,34 @@ main {
 
 .card-img {
   height: 40px;
+}
+
+@media only screen and (max-height: 900px) {
+ .coin-card {
+   width: 200px;
+ }
+ .coin-card::before {
+   width: 200px;
+ }
+
+ .card-pseudo-wrapper {
+   height: 60vh;
+ }
+
+ .card-pseudo-wrapper::after {
+   height: 60vh;
+ }
+
+ .exit-btn {
+   padding: 10px;
+   /* border: 1px solid red; */
+   background-repeat: no-repeat;
+   background-size: 60%;
+   background-position: center;
+ }
+
+ #view__delete::before {
+   top: 40px;
+   width: 72%;
+ }
 }
