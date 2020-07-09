@@ -36,7 +36,7 @@ let renderCoinCard = (coin) => {
 let coinView = (coin) => {
   modalCardView.style.display = 'block'
   modalCardView.innerHTML = `
-  <div id="${coin.id}" class="card-pseudo-wrapper" style="background-color: #${coin.color}">
+  <div id="${coin.id}" class="card-pseudo-wrapper" style="background-color: ${coin.color}">
     <div class="exit-btn"></div>
     <div id="card-view-inner">
       <div id="card-view-header">
