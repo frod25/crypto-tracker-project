@@ -85,6 +85,7 @@ let coinView = (coin) => {
   let amtHeld = main.querySelector('#coin__amtHeld-container')
   let coinStatus = main.querySelector("#coin__status-container")
   let coinStatusP = main.querySelector('#coin__status')
+  let coinBalanceP = main.querySelector("#coin__amtHeld")
   main.addEventListener('click', e => {
     if (e.target === exit) {
         modalCardContainer.style.display = 'grid'
@@ -92,11 +93,37 @@ let coinView = (coin) => {
     } else if (e.target == coinStatusP) {
       console.log(e.target.textContent)
       let attr = Object.keys(coin).find(key => coin[key] == e.target.textContent)
-      coinChange(coin, coinStatusP, attr)
+      statusChange(coin, coinStatusP, attr)
+    } else if (e.target == coinBalanceP) {
+      let attr = Object.keys(coin).find(key => coin[key] == e.target.textContent)
+      balanceChange(coin, coinBalanceP, attr)
     }
   })
 
-  const coinChange = (coin, element, attr) => {
+  const balanceChange = (coin, element, attr) => {
+    let elementParent = element.parentNode
+    elementParent.innerHTML = `
+      <input id="elementInput" type="text" value="${element.textContent}">
+    `
+    let input = elementParent.querySelector("#elementInput")
+    elementInput.addEventListener('keypress', e => {
+      let obj = {}
+      obj[attr] = e.target.value
+      if (e.key === 'Enter') {
+        updateCoin(coin.id, obj).then(newObj => {
+          elementParent.innerHTML = `
+            <p id="coin__amtHeld">${newObj.balance}</p>
+          `
+          const coinCard = cardsContainer.querySelector(`#card-${coin.id}`)
+          cardsContainer.removeChild(coinCard)
+          renderCoinCard(newObj)
+          console.log(newObj.id)
+        })
+      }
+    })
+  }
+
+  const statusChange = (coin, element, attr) => {
     let elementParent = element.parentNode
     elementParent.innerHTML = `
       <input id="elementInput" type="text" value="${element.textContent}">
