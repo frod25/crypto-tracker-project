@@ -310,9 +310,9 @@ main {
 }
 
 .modal-card-view {
-  width: 90vw;
+  width: 50vw;
   /* background-color: #FBFBFC; */
-  height: 70vh;
+  height: 50vh;
   border: 3px solid #3A3C42;
   margin: 0 auto;
   position: relative;
@@ -323,8 +323,8 @@ main {
 .modal-card-view::after {
   content: "";
   position: absolute;
-  width: 90vw;
-  height: 70vh;
+  width: 50vw;
+  height: 50vh;
   bottom: 15px;
   right: 15px;
   border: 3px solid #3A3C42;
@@ -351,9 +351,12 @@ main {
 
 #card-view-inner {
   margin: 0 auto;
-  border: 1px solid red;
+  /* border: 1px solid red; */
   height: 80%;
   /* keep the border on until you address the padding on the bottom issue */
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
   width: 90%;
   position: relative;
   z-index: 1;
@@ -380,6 +383,55 @@ main {
   font-size: 2em;
   text-align: left;
   margin-left: 2vw;
+}
+
+.coin-view-body {
+  /* border: 1px solid blue; */
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  grid-template-rows: 1fr 1fr;
+  gap: 15px 1px;
+  grid-template-areas: "amt-held value price market-cap" "status delete delete delete" ". . . .";
+  height: fit-content;
+}
+
+.coin-view-body > * {
+  /* border: 1px solid red; */
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  font-family: 'IBM Plex Mono', monospace;
+  /* width: fit-content; */
+}
+
+#view__delete {
+  grid-area: delete;
+  position: relative;
+}
+
+#view__delete::before {
+  content: "";
+  position: absolute;
+  width: 75%;
+  height: 5px;
+  top: 2.4vh;
+  left: 5px;
+  /* margin: 25px 0; */
+  background-color: #3A3C42;
+}
+
+#view__delete > input {
+  border: none;
+  background-color: transparent;
+  width: 10vw;
+  height: 100%;
+  /* float: right; */
+  position: absolute;
+  right: 0;
+  outline: none;
+  font-family: 'IBM Plex Mono', monospace;
+  font-weight: 400;
+  font-size: 1.5em;
 }
 
 #modal-scroll {
