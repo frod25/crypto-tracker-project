@@ -1,3 +1,5 @@
+let details;
+
 const search = document.querySelector("#search-btn")
 const searchForm = document.querySelector("#search-form")
 const searchInput = document.querySelector("#search-input")
@@ -28,6 +30,7 @@ let renderCoinCard = (coin) => {
   })
 }
 
+
 let coinView = (coin) => {
   modalCardView.style.display = 'block'
   modalCardView.innerHTML = `
@@ -42,23 +45,23 @@ let coinView = (coin) => {
         </div>
       </div>
       <div class="coin-view-body">
-        <div class="coin-view-body-wrapper" id="view__amt-held">
+        <div class="coin-view-body-wrapper editable" id="view__amt-held">
           <h2 class="bold">Amount Held</h2>
           <p>${coin.balance}</p>
         </div>
-        <div class="coin-view-body-wrapper" id="view__status">
+        <div class="coin-view-body-wrapper editable" id="view__status">
           <h2 class="bold">Value</h2>
           <p>$500</p>
         </div>
-        <div class="coin-view-body-wrapper" id="view__price">
+        <div class="coin-view-body-wrapper editable" id="view__price">
           <h2 class="bold">Price</h2>
           <p>250.21</p>
         </div>
-        <div class="coin-view-body-wrapper" id="view__market-cap">
+        <div class="coin-view-body-wrapper editable" id="view__market-cap">
           <h2 class="bold">Market Cap</h2>
           <p>1.53b</p>
         </div>
-        <div class="coin-view-body-wrapper" id="view__status">
+        <div class="coin-view-body-wrapper editable" id="view__status">
           <h2 class="bold">Status</h2>
           <p>${coin.status}</p>
         </div>
@@ -72,7 +75,7 @@ let coinView = (coin) => {
   main.appendChild(modalCardView)
   let exit = main.querySelector('.exit-btn')
   exit.addEventListener('click', e => {
-    modalCardContainer.style.display = 'block'
+    modalCardContainer.style.display = 'grid'
     modalCardView.style.display = "none"
   })
   // main.innerHTML = cardView
@@ -80,17 +83,6 @@ let coinView = (coin) => {
 
 
 
-let filterCoin = (arr, str) => {
-  return arr.filter(coin => {
-    if (coin.name.toLowerCase().includes(str.toLowerCase())) {
-      return coin.name
-    } else if (coin.ticker_symbol.toLowerCase().includes(str.toLowerCase())) {
-      return coin.ticker_symbol
-    } else if (coin.status.toLowerCase().includes(str.toLowerCase())) {
-      return coin.status
-    }
-  })
-}
 
 search.addEventListener('click', e => {
   if (searchContainer.style.width == "350px") {
@@ -103,10 +95,10 @@ search.addEventListener('click', e => {
 
 let searchEventListener = (coins) => {
   searchForm.addEventListener('input', e => {
+    console.log(searchInput.value)
     if (modalCreateNew.style.display == 'block') {
       modalCreateNew.style.display = 'none'
-      // notice how there's a padding issue here
-      modalCardContainer.style.display = 'block'
+      modalCardContainer.style.display = 'grid'
     }
     let filtered = filterCoin(coins, searchInput.value)
     if (filtered.length === 0) {
@@ -118,10 +110,22 @@ let searchEventListener = (coins) => {
   })
 }
 
+let filterCoin = (arr, str) => {
+  console.log(str)
+  return arr.filter(coin => {
+    console.log(coin)
+    if (coin.name.toLowerCase().includes(str.toLowerCase())) {
+      return coin.name
+    } else if (coin.ticker_symbol.toLowerCase().includes(str.toLowerCase())) {
+      return coin.ticker_symbol
+    }
+  })
+}
+
 addNew.addEventListener('click', e => {
   if (modalCreateNew.style.display == 'block') {
     modalCreateNew.style.display = 'none'
-    modalCardContainer.style.display = 'block'
+    modalCardContainer.style.display = 'grid'
   } else {
     modalCardContainer.style.display = 'none'
     modalCreateNew.style.display = 'block'
@@ -133,7 +137,6 @@ let renderCoinCards = (items) => {
     renderCoinCard(coin)
   })
 }
-
 
 // fetch and render all coins on front page and add event listener for search form
 const renderMainView = () => {

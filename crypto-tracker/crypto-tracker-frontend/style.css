@@ -406,6 +406,15 @@ main {
   text-align: center;
   font-family: 'IBM Plex Mono', monospace;
   /* width: fit-content; */
+  border-left: 3px solid transparent;
+}
+
+.editable {
+  transition: all .2s ease-in-out;
+}
+
+.editable:hover {
+  border-left: 3px solid #3A3C42;
 }
 
 #view__delete {
