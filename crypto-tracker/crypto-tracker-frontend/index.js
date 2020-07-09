@@ -55,11 +55,11 @@ let coinView = (coin) => {
         </div>
         <div class="coin-view-body-wrapper" id="view__value">
           <h2 class="bold">Value</h2>
-          <p>$500</p>
+          <p id="dollarValue">$500</p>
         </div>
         <div class="coin-view-body-wrapper" id="view__price">
           <h2 class="bold">Price</h2>
-          <p>250.21</p>
+          <p id="coinPrice">250.21</p>
         </div>
         <div class="coin-view-body-wrapper" id="view__market-cap">
           <h2 class="bold">Market Cap</h2>
@@ -116,7 +116,25 @@ let coinView = (coin) => {
   del.addEventListener('click', e => {
     deleteCoinAndRemoveCard(coin.id)
   })
-  // main.innerHTML = cardView
+
+  getPnomicsData(coin.ticker_symbol)
+  .then(coinData => {
+    renderPriceInfo(coinData[0], coin.balance)
+  })
+}
+
+const calcValue = (balance, price) => {
+  const num = balance * price
+  const roundedNum = (Math.round((num + Number.EPSILON) * 100) / 100).toFixed(2)
+  return roundedNum
+}
+
+const renderPriceInfo = (coinData, balance) => {
+  const dollarValue = modalCardView.querySelector("#dollarValue")
+  const coinPrice = modalCardView.querySelector("#coinPrice")
+  const roundedPrice = (Math.round((parseFloat(coinData.price) + Number.EPSILON) * 100) / 100).toFixed(2)
+  coinPrice.textContent = `$${roundedPrice}`
+  dollarValue.textContent = `$${calcValue(balance, roundedPrice)}`
 }
 
 // const updateCoinData = ()
