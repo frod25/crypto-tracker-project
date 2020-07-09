@@ -309,7 +309,7 @@ main {
   z-index: -1;
 }
 
-.modal-card-view {
+#card-pseudo-wrapper {
   width: 50vw;
   /* background-color: #FBFBFC; */
   height: 50vh;
@@ -320,7 +320,7 @@ main {
   place-items: center;
 }
 
-.modal-card-view::after {
+#card-pseudo-wrapper::after {
   content: "";
   position: absolute;
   width: 50vw;
@@ -329,6 +329,10 @@ main {
   right: 15px;
   border: 3px solid #3A3C42;
   background-color: #FBFBFC;
+}
+
+#modal-card-view {
+  display: none;
 }
 
 .exit-btn {
@@ -402,6 +406,15 @@ main {
   text-align: center;
   font-family: 'IBM Plex Mono', monospace;
   /* width: fit-content; */
+  border-left: 3px solid transparent;
+}
+
+.editable {
+  transition: all .2s ease-in-out;
+}
+
+.editable:hover {
+  border-left: 3px solid #3A3C42;
 }
 
 #view__delete {
