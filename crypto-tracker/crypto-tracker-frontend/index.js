@@ -55,11 +55,11 @@ let coinView = (coin) => {
         </div>
         <div class="coin-view-body-wrapper" id="view__value">
           <h2 class="bold">Value</h2>
-          <p id="dollarValue">$500</p>
+          <p id="dollarValue"></p>
         </div>
         <div class="coin-view-body-wrapper" id="view__price">
           <h2 class="bold">Price</h2>
-          <p id="coinPrice">250.21</p>
+          <p id="coinPrice">25</p>
         </div>
         <div class="coin-view-body-wrapper" id="view__market-cap">
           <h2 class="bold">Market Cap</h2>
@@ -168,9 +168,21 @@ const renderPriceInfo = (coinData, balance) => {
   const dollarValue = modalCardView.querySelector("#dollarValue")
   const coinPrice = modalCardView.querySelector("#coinPrice")
   const marketCapVal = modalCardView.querySelector("#marketCapVal")
+  const actualPrice = parseFloat(coinData.price).toFixed(4)
   const roundedPrice = (Math.round((parseFloat(coinData.price) + Number.EPSILON) * 100) / 100).toFixed(2)
-  coinPrice.textContent = `$${roundedPrice}`
-  dollarValue.textContent = `$${calcValue(balance, roundedPrice)}`
+  if (coinData.price < 1) {
+    coinPrice.textContent = `$${actualPrice}`
+    let bal = actualPrice * balance.toFixed(4)
+    console.log(bal)
+    dollarValue.textContent = `$${bal.toFixed(2)}`
+  } else {
+    coinPrice.textContent = `$${roundedPrice}`
+    dollarValue.textContent = `$${calcValue(balance, roundedPrice)}`
+  }
+
+
+
+  // dollarValue.textContent = `$${calcValue(balance, roundedPrice)}`
   marketCapVal.textContent = `${coinData.market_cap}`
 }
 
