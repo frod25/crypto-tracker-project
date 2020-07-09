@@ -49,15 +49,15 @@ let coinView = (coin) => {
           <h2 class="bold">Amount Held</h2>
           <p>${coin.balance}</p>
         </div>
-        <div class="coin-view-body-wrapper editable" id="view__status">
+        <div class="coin-view-body-wrapper" id="view__status">
           <h2 class="bold">Value</h2>
           <p>$500</p>
         </div>
-        <div class="coin-view-body-wrapper editable" id="view__price">
+        <div class="coin-view-body-wrapper" id="view__price">
           <h2 class="bold">Price</h2>
           <p>250.21</p>
         </div>
-        <div class="coin-view-body-wrapper editable" id="view__market-cap">
+        <div class="coin-view-body-wrapper" id="view__market-cap">
           <h2 class="bold">Market Cap</h2>
           <p>1.53b</p>
         </div>
@@ -74,12 +74,17 @@ let coinView = (coin) => {
   `
   main.appendChild(modalCardView)
   let exit = main.querySelector('.exit-btn')
-  exit.addEventListener('click', e => {
-    console.log(e)
-    modalCardContainer.style.display = 'grid'
-    modalCardView.style.display = "none"
+  // exit.addEventListener('click', e => {
+  //   console.log(e)
+  //   modalCardContainer.style.display = 'grid'
+  //   modalCardView.style.display = "none"
+  // })
+  main.addEventListener('click', e => {
+    if (e.target === exit) {
+      console.log('yeah')
+    }
   })
-  // main.innerHTML = cardView
+
 }
 
 
