@@ -49,7 +49,9 @@ let coinView = (coin) => {
       <div class="coin-view-body">
         <div class="coin-view-body-wrapper editable" id="view__amt-held">
           <h2 class="bold">Amount Held</h2>
-          <p id="coin__amtHeld">${coin.balance}</p>
+          <div id="coin__amtHeld-container">
+            <p id="coin__amtHeld">${coin.balance}</p>
+          </div>
         </div>
         <div class="coin-view-body-wrapper" id="view__value">
           <h2 class="bold">Value</h2>
@@ -65,7 +67,9 @@ let coinView = (coin) => {
         </div>
         <div class="coin-view-body-wrapper editable" id="view__status">
           <h2 class="bold">Status</h2>
-          <p id="coin__status">${coin.status}</p>
+          <div id="coin__status-container">
+            <p id="coin__status">${coin.status}</p>
+          </div>
         </div>
         <div class="coin-view-body-wrapper" id="view__delete">
           <input type="submit" placeholder="delete" name="delete" value="DELETE">
@@ -78,18 +82,35 @@ let coinView = (coin) => {
 
 
   let exit = main.querySelector('.exit-btn')
-  let amtHeld = main.querySelector('#coin__amtHeld')
-  let coinStatus = main.querySelector("#coin__status")
+  let amtHeld = main.querySelector('#coin__amtHeld-container')
+  let coinStatus = main.querySelector("#coin__status-container")
+  let coinStatusP = main.querySelector('#coin__status')
   main.addEventListener('click', e => {
     if (e.target === exit) {
         modalCardContainer.style.display = 'grid'
         modalCardView.style.display = "none"
-    } else if (e.target === amtHeld) {
-      amtHeld.contentEditable = true
-    } else if (e.target === coinStatus) {
-      coinStatus.contentEditable = true
+    } else if (e.target == coinStatusP) {
+      console.log(e.target.textContent)
+      let attr = Object.keys(coin).find(key => coin[key] == e.target.textContent)
+      // console.log(attr)
+      coinChange(coin, coinStatusP, attr)
     }
   })
+
+  const coinChange = (coin, element, attr) => {
+    let elementParent = element.parentNode
+    elementParent.innerHTML = `
+      <input id="elementInput" type="text" value="${element.textContent}">
+    `
+    let input = elementParent.querySelector('#elementInput')
+    elementInput.addEventListener('keypress', e => {
+      let obj = {}
+      obj[attr] = e.target.value
+      if (e.key === 'Enter') {
+        updateCoin(coin.id, obj)
+      }
+    })
+  }
 
   const del = modalCardView.querySelector('[name="delete"]')
   del.addEventListener('click', e => {
@@ -98,10 +119,7 @@ let coinView = (coin) => {
   // main.innerHTML = cardView
 }
 
-const coinChange = (coin, attr) => {
-
-}
-
+// const updateCoinData = ()
 
 const deleteCoinAndRemoveCard = (coinId) => {
   deleteCoin(coinId)
