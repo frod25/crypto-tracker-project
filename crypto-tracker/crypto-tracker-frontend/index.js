@@ -7,59 +7,9 @@ const searchContainer = document.querySelector("#search-input-outer")
 const addNew = document.querySelector("#new-btn")
 const modalCardContainer = document.querySelector("#modal-card-container")
 const modalCreateNew = document.querySelector("#modal-create-new")
+const modalCardView = document.querySelector("#modal-card-view")
 const main = document.querySelector('main')
 const cardsContainer = document.querySelector('#modal-scroll')
-
-let coinView = (coin) => {
-  main.innerHTML = ""
-  let cardView = document.createElement('section')
-  cardView.className = "modal-card-view"
-  cardView.style.backgroundColor = `#${coin.color}`
-  cardView.innerHTML = `
-  <div class="exit-btn"></div>
-  <div id="card-view-inner">
-    <div id="card-view-header">
-      <img src="${coin.ticker_image}" alt="${coin.name} logo" class="card-view-img">
-      <div class="coin-header-wrapper">
-        <h2 class="bold-text" id="card-view-ticker_symbol">${coin.ticker_symbol}</h2>
-        <h2 id="card-view-coin_name">${coin.name}</h2>
-      </div>
-    </div>
-    <div class="coin-view-body">
-      <div class="coin-view-body-wrapper" id="view__amt-held">
-        <h2 class="bold">Amount Held</h2>
-        <p>${coin.balance}</p>
-      </div>
-      <div class="coin-view-body-wrapper" id="view__status">
-        <h2 class="bold">Value</h2>
-        <p>$500</p>
-      </div>
-      <div class="coin-view-body-wrapper" id="view__price">
-        <h2 class="bold">Price</h2>
-        <p>250.21</p>
-      </div>
-      <div class="coin-view-body-wrapper" id="view__market-cap">
-        <h2 class="bold">Market Cap</h2>
-        <p>1.53b</p>
-      </div>
-      <div class="coin-view-body-wrapper" id="view__status">
-        <h2 class="bold">Status</h2>
-        <p>${coin.status}</p>
-      </div>
-      <div class="coin-view-body-wrapper" id="view__delete">
-        <input type="submit" placeholder="delete" name="delete" value="DELETE">
-      </div>
-    </div>
-  </div>
-  `
-  main.appendChild(cardView)
-  let exit = main.querySelector('.exit-btn')
-  exit.addEventListener('click', e => {
-    // what function gets called here?
-    // renderMainView()
-  })
-  // main.innerHTML = cardView
-}
 
 let renderCoinCard = (coin) => {
   let card = document.createElement('div')
@@ -73,9 +23,62 @@ let renderCoinCard = (coin) => {
   `
   cardsContainer.appendChild(card)
   card.addEventListener('click', e => {
+    modalCardContainer.style.display = 'none'
     coinView(coin)
   })
 }
+
+let coinView = (coin) => {
+  modalCardView.style.display = 'block'
+  modalCardView.innerHTML = `
+  <div id="card-pseudo-wrapper" style="background-color: #${coin.color}">
+    <div class="exit-btn"></div>
+    <div id="card-view-inner">
+      <div id="card-view-header">
+        <img src="${coin.ticker_image}" alt="${coin.name} logo" class="card-view-img">
+        <div class="coin-header-wrapper">
+          <h2 class="bold-text" id="card-view-ticker_symbol">${coin.ticker_symbol}</h2>
+          <h2 id="card-view-coin_name">${coin.name}</h2>
+        </div>
+      </div>
+      <div class="coin-view-body">
+        <div class="coin-view-body-wrapper" id="view__amt-held">
+          <h2 class="bold">Amount Held</h2>
+          <p>${coin.balance}</p>
+        </div>
+        <div class="coin-view-body-wrapper" id="view__status">
+          <h2 class="bold">Value</h2>
+          <p>$500</p>
+        </div>
+        <div class="coin-view-body-wrapper" id="view__price">
+          <h2 class="bold">Price</h2>
+          <p>250.21</p>
+        </div>
+        <div class="coin-view-body-wrapper" id="view__market-cap">
+          <h2 class="bold">Market Cap</h2>
+          <p>1.53b</p>
+        </div>
+        <div class="coin-view-body-wrapper" id="view__status">
+          <h2 class="bold">Status</h2>
+          <p>${coin.status}</p>
+        </div>
+        <div class="coin-view-body-wrapper" id="view__delete">
+          <input type="submit" placeholder="delete" name="delete" value="DELETE">
+        </div>
+      </div>
+    </div>
+  </div>
+  `
+  main.appendChild(modalCardView)
+  let exit = main.querySelector('.exit-btn')
+  exit.addEventListener('click', e => {
+    modalCardContainer.style.display = 'block'
+    modalCardView.style.display = "none"
+  })
+  // main.innerHTML = cardView
+}
+
+
 
 let filterCoin = (arr, str) => {
   return arr.filter(coin => {
