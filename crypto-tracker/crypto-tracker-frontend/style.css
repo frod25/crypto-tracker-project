@@ -180,8 +180,8 @@ main {
   border: 3px solid #3A3C42;
   position: relative;
   padding: 5vh 0;
-  height: 400px;
-  width: 650px;
+  height: 450px;
+  width: 700px;
   margin: 0 auto;
 }
 
@@ -189,10 +189,10 @@ main {
   content: "";
   padding: 5vh 0;
   position: absolute;
-  height: 400px;
+  height: 450px;
   background-color: #ff6b4a;
   border: 3px solid #3A3C42;
-  width: 650px;
+  width: 700px;
   top: 10px;
   left: 10px;
   z-index: -1;
@@ -204,15 +204,26 @@ main {
   grid-template-columns: 1fr 1.3fr 0.7fr 1fr;
   grid-template-rows: 1fr 1fr 1fr 1fr 1fr;
   gap: 25px 15px;
+  /* border: 1px solid red; */
+  width: 90%;
+  margin: 0 auto;
   grid-template-areas: "new__cryptocurrency new__cryptocurrency new__cryptocurrency new__ticker-symbol" "new__ticker-image new__ticker-image new__ticker-image new__ticker-image"
   "new__landing_page new__landing_page new__landing_page new__landing_page"
-  "new__status new__card-color new__balance new__balance"
+  "new__status new__balance new__balance new__card-color"
   "new__submit new__submit new__submit new__submit";
+}
+
+.form-labels {
+  /* border: 1px solid red; */
+  display: flex;
+  flex-direction: column;
+  /* font-family:  */
+  font-family: 'IBM Plex Mono', monospace;
 }
 
 .create-new-input {
   background-color: #FBFBFC;
-  height: 40px;
+  height: 30px;
   margin: 0;
   border: 0;
 }
@@ -257,11 +268,17 @@ main {
 }
 
 #labelhere {
-  color: #3A3C42;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-around;
+  height: 45px;
+  /* border: 1px solid red; */
+  /* color: #3A3C42; */
   font-family: 'IBM Plex Mono', monospace;
   font-weight: 400;
   grid-area: new__card-color;
-  border-bottom: 2px solid rgba(58, 60, 66, 0.5);
+  /* border-bottom: 2px solid rgba(58, 60, 66, 0.5); */
   background-color: #FBFBFC;
   height: 40px;
   line-height: 40px;
@@ -538,4 +555,12 @@ main {
    top: 40px;
    width: 72%;
  }
+}
+
+
+#myChart {
+  border: 1px solid red;
+  margin-left: 2vw;
+  height: 200px !important;
+  width: 400px !important;
 }

@@ -81,6 +81,7 @@ let coinView = (coin) => {
   main.appendChild(modalCardView)
 
 
+
   let exit = main.querySelector('.exit-btn')
   let amtHeld = main.querySelector('#coin__amtHeld-container')
   let coinStatus = main.querySelector("#coin__status-container")
@@ -114,6 +115,7 @@ let coinView = (coin) => {
           elementParent.innerHTML = `
             <p id="coin__amtHeld">${newObj.balance}</p>
           `
+
           const coinCard = cardsContainer.querySelector(`#card-${coin.id}`)
           cardsContainer.removeChild(coinCard)
           renderCoinCard(newObj)
@@ -173,17 +175,11 @@ const renderPriceInfo = (coinData, balance) => {
   if (coinData.price < 1) {
     coinPrice.textContent = `$${actualPrice}`
     let bal = actualPrice * balance.toFixed(4)
-    console.log(bal)
     dollarValue.textContent = `$${bal.toFixed(2)}`
   } else {
     coinPrice.textContent = `$${roundedPrice}`
     dollarValue.textContent = `$${calcValue(balance, roundedPrice)}`
   }
-
-
-
-  // dollarValue.textContent = `$${calcValue(balance, roundedPrice)}`
-
   marketCapVal.textContent = `$${(parseInt(coinData.market_cap)).toLocaleString('en')}`
 }
 
