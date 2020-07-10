@@ -95,7 +95,7 @@ nav {
 
 #search-btn {
   background-image: url('./assets/search.svg');
-  transition: all .1s ease-in;
+  /* transition: all .5s ease; */
 }
 
 

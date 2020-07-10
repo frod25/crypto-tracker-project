@@ -200,8 +200,11 @@ const deleteCoinAndRemoveCard = (coinId) => {
 search.addEventListener('click', e => {
   if (searchContainer.style.width == "350px") {
     searchContainer.style.width = "0px"
+    search.style.backgroundImage = "url('./assets/search.svg')"
   } else {
     searchContainer.style.width = "350px"
+    search.style.backgroundImage = "url('./assets/right-arrow.svg')"
+
 
   }
 })
