@@ -55,11 +55,11 @@ let coinView = (coin) => {
         </div>
         <div class="coin-view-body-wrapper" id="view__value">
           <h2 class="bold">Value</h2>
-          <p id="dollarValue">$500</p>
+          <p id="dollarValue"></p>
         </div>
         <div class="coin-view-body-wrapper" id="view__price">
           <h2 class="bold">Price</h2>
-          <p id="coinPrice">250.21</p>
+          <p id="coinPrice">25</p>
         </div>
         <div class="coin-view-body-wrapper" id="view__market-cap">
           <h2 class="bold">Market Cap</h2>
@@ -81,10 +81,12 @@ let coinView = (coin) => {
   main.appendChild(modalCardView)
 
 
+
   let exit = main.querySelector('.exit-btn')
   let amtHeld = main.querySelector('#coin__amtHeld-container')
   let coinStatus = main.querySelector("#coin__status-container")
   let coinStatusP = main.querySelector('#coin__status')
+  let coinBalanceP = main.querySelector("#coin__amtHeld")
   main.addEventListener('click', e => {
     if (e.target === exit) {
         modalCardContainer.style.display = 'grid'
@@ -92,12 +94,38 @@ let coinView = (coin) => {
     } else if (e.target == coinStatusP) {
       console.log(e.target.textContent)
       let attr = Object.keys(coin).find(key => coin[key] == e.target.textContent)
-      // console.log(attr)
-      coinChange(coin, coinStatusP, attr)
+      statusChange(coin, coinStatusP, attr)
+    } else if (e.target == coinBalanceP) {
+      let attr = Object.keys(coin).find(key => coin[key] == e.target.textContent)
+      balanceChange(coin, coinBalanceP, attr)
     }
   })
 
-  const coinChange = (coin, element, attr) => {
+  const balanceChange = (coin, element, attr) => {
+    let elementParent = element.parentNode
+    elementParent.innerHTML = `
+      <input id="elementInput" type="text" value="${element.textContent}">
+    `
+    let input = elementParent.querySelector("#elementInput")
+    elementInput.addEventListener('keypress', e => {
+      let obj = {}
+      obj[attr] = e.target.value
+      if (e.key === 'Enter') {
+        updateCoin(coin.id, obj).then(newObj => {
+          elementParent.innerHTML = `
+            <p id="coin__amtHeld">${newObj.balance}</p>
+          `
+
+          const coinCard = cardsContainer.querySelector(`#card-${coin.id}`)
+          cardsContainer.removeChild(coinCard)
+          renderCoinCard(newObj)
+          console.log(newObj.id)
+        })
+      }
+    })
+  }
+
+  const statusChange = (coin, element, attr) => {
     let elementParent = element.parentNode
     elementParent.innerHTML = `
       <input id="elementInput" type="text" value="${element.textContent}">
@@ -107,7 +135,16 @@ let coinView = (coin) => {
       let obj = {}
       obj[attr] = e.target.value
       if (e.key === 'Enter') {
-        updateCoin(coin.id, obj)
+        updateCoin(coin.id, obj).then(newObj => {
+          elementParent.innerHTML = `
+            <p id="coin__status">${newObj.status}</p>
+          `
+          const coinCard = cardsContainer.querySelector(`#card-${coin.id}`)
+          cardsContainer.removeChild(coinCard)
+          renderCoinCard(newObj)
+          console.log(newObj.id)
+        })
+
       }
     })
   }
@@ -133,10 +170,17 @@ const renderPriceInfo = (coinData, balance) => {
   const dollarValue = modalCardView.querySelector("#dollarValue")
   const coinPrice = modalCardView.querySelector("#coinPrice")
   const marketCapVal = modalCardView.querySelector("#marketCapVal")
+  const actualPrice = parseFloat(coinData.price).toFixed(4)
   const roundedPrice = (Math.round((parseFloat(coinData.price) + Number.EPSILON) * 100) / 100).toFixed(2)
-  coinPrice.textContent = `$${roundedPrice}`
-  dollarValue.textContent = `$${calcValue(balance, roundedPrice)}`
-  marketCapVal.textContent = `${coinData.market_cap}`
+  if (coinData.price < 1) {
+    coinPrice.textContent = `$${actualPrice}`
+    let bal = actualPrice * balance.toFixed(4)
+    dollarValue.textContent = `$${bal.toFixed(2)}`
+  } else {
+    coinPrice.textContent = `$${roundedPrice}`
+    dollarValue.textContent = `$${calcValue(balance, roundedPrice)}`
+  }
+  marketCapVal.textContent = `$${(parseInt(coinData.market_cap)).toLocaleString('en')}`
 }
 
 // const updateCoinData = ()
@@ -153,8 +197,11 @@ const deleteCoinAndRemoveCard = (coinId) => {
 search.addEventListener('click', e => {
   if (searchContainer.style.width == "350px") {
     searchContainer.style.width = "0px"
+    search.style.backgroundImage = "url('./assets/search.svg')"
   } else {
     searchContainer.style.width = "350px"
+    search.style.backgroundImage = "url('./assets/right-arrow.svg')"
+
 
   }
 })

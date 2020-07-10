@@ -4,8 +4,11 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <script src="https://cdn.jsdelivr.net/npm/chart.js@2.9.3/dist/Chart.min.js"></script>
   <script src="./src/fetch.js"></script>
+
   <script type="text/javascript" src="index.js" defer></script>
+
   <link rel="stylesheet" href="style.css">
   <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500;700&display=swap" rel="stylesheet">
   <title>Ledger</title>
@@ -38,21 +41,36 @@
       <form id="createNewForm" action="">
         <h2>Track a Cryptocurrency</h2>
         <div id="new-inner">
-          <input type="text" id="new__cryptocurrency" class="create-new-input charcoal-underline" name="name" placeholder="Project Name">
-          <input type="text" id="new__ticker-symbol" class="create-new-input charcoal-underline" name="tickerSymbol" placeholder="Symbol">
-          <input type="text" id="new__ticker-image" class="create-new-input charcoal-underline" name="tickerImage" placeholder="Ticker Image">
-          <input type="text" id="new__landing_page" class="create-new-input charcoal-underline" name="landingPage" placeholder="Landing Page">
-          <input type="text" id="new__status" class="create-new-input charcoal-underline" name="status" placeholder="Status">
-          <label for="color" id="labelhere" class="charcoal-underline">
-            <span>Card Color</span>
-            <input type="color" id="new__card-color" class="create-new-input" name="color" placeholder="Color">
+          <label class="form-labels" id="new__cryptocurrency">
+            Cryptocurrency
+            <input type="text" id="" class="create-new-input charcoal-underline" name="name" placeholder="">
           </label>
-          <input type="number" step="any" min="0" id="new__balance" class="create-new-input charcoal-underline" name="balance" placeholder="balance">
+          <label class="form-labels" for="" id="new__ticker-symbol">
+            Symbol
+            <input type="text" class="create-new-input charcoal-underline" name="tickerSymbol" placeholder="">
+          </label>
+          <label class="form-labels" for="" id="new__ticker-image">
+            Image
+            <input type="text" class="create-new-input charcoal-underline" name="tickerImage"></label>
+          <label class="form-labels" for="" id="new__landing_page">
+            Website
+            <input type="text" class="create-new-input charcoal-underline" name="landingPage"></label>
+          <label class="form-labels" for=""  id="new__status">
+            Status
+            <input type="text" class="create-new-input charcoal-underline" name="status"></label>
+          <label class="form-labels" for="color" id="labelhere">
+            Color
+            <input type="color" id="new__card-color" class="create-new-input" name="color">
+          </label>
+          <label class="form-labels" for="" id="new__balance">
+            Balance
+            <input type="number" step="any" min="0"  class="create-new-input charcoal-underline" name="balance"></label>
           <input type="submit" id="new__submit" placeholder="Submit">
         </div>
       </form>
     </section>
     <section id="modal-card-view"></section>
   </main>
+
 </body>
 </html>

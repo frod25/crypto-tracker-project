@@ -41,8 +41,8 @@ function updateCoin(coinId, coinObj){
     .then(res => res.json())
 }
 
+
 function getPnomicsData(tickerSymbol){
     return fetch(`https://api.nomics.com/v1/currencies/ticker?key=a52548d8dac7bd5b2fdfa92f3aab749e&ids=${tickerSymbol}&interval=1d&convert=USD`)
     .then(response => response.json())
-
 }
