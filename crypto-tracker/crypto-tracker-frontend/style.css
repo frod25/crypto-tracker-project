@@ -221,6 +221,13 @@ main {
   font-family: 'IBM Plex Mono', monospace;
 }
 
+#form-submit {
+  border: 1px solid red;
+  background-color: transparent;
+  border: none;
+  outline: none;
+}
+
 .create-new-input {
   background-color: #FBFBFC;
   height: 30px;

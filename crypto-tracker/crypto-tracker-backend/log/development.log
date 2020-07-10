@@ -9996,3 +9996,307 @@ Started GET "/coins/" for ::1 at 2020-07-09 23:45:59 -0400
 Processing by CoinsController#index as */*
   [1m[36mCoin Load (0.4ms)[0m  [1m[34mSELECT "coins".* FROM "coins"[0m
   ↳ app/controllers/coins_controller.rb:5:in `index'
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (2.04ms)
+Completed 200 OK in 5ms (Views: 4.2ms | ActiveRecord: 0.4ms | Allocations: 3147)
+
+
+Started GET "/coins/" for ::1 at 2020-07-09 23:45:59 -0400
+Processing by CoinsController#index as */*
+  [1m[36mCoin Load (0.4ms)[0m  [1m[34mSELECT "coins".* FROM "coins"[0m
+  ↳ app/controllers/coins_controller.rb:5:in `index'
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (1.82ms)
+Completed 200 OK in 13ms (Views: 12.1ms | ActiveRecord: 0.4ms | Allocations: 3150)
+
+
+Started GET "/coins/" for ::1 at 2020-07-09 23:45:59 -0400
+Processing by CoinsController#index as */*
+  [1m[36mCoin Load (0.4ms)[0m  [1m[34mSELECT "coins".* FROM "coins"[0m
+  ↳ app/controllers/coins_controller.rb:5:in `index'
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (2.45ms)
+Completed 200 OK in 5ms (Views: 4.2ms | ActiveRecord: 0.4ms | Allocations: 3147)
+
+
+Started GET "/coins/" for ::1 at 2020-07-09 23:45:59 -0400
+Processing by CoinsController#index as */*
+  [1m[36mCoin Load (0.4ms)[0m  [1m[34mSELECT "coins".* FROM "coins"[0m
+  ↳ app/controllers/coins_controller.rb:5:in `index'
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (2.58ms)
+Completed 200 OK in 5ms (Views: 4.6ms | ActiveRecord: 0.4ms | Allocations: 3147)
+
+
+Started GET "/coins/" for ::1 at 2020-07-09 23:45:59 -0400
+Processing by CoinsController#index as */*
+  [1m[36mCoin Load (0.2ms)[0m  [1m[34mSELECT "coins".* FROM "coins"[0m
+  ↳ app/controllers/coins_controller.rb:5:in `index'
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (1.51ms)
+Completed 200 OK in 4ms (Views: 3.5ms | ActiveRecord: 0.2ms | Allocations: 3147)
+
+
+Started GET "/coins/" for ::1 at 2020-07-09 23:45:59 -0400
+Processing by CoinsController#index as */*
+  [1m[36mCoin Load (0.2ms)[0m  [1m[34mSELECT "coins".* FROM "coins"[0m
+  ↳ app/controllers/coins_controller.rb:5:in `index'
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (1.45ms)
+Completed 200 OK in 3ms (Views: 3.1ms | ActiveRecord: 0.2ms | Allocations: 3147)
+
+
+Started GET "/coins/" for ::1 at 2020-07-09 23:46:15 -0400
+Processing by CoinsController#index as */*
+  [1m[36mCoin Load (0.3ms)[0m  [1m[34mSELECT "coins".* FROM "coins"[0m
+  ↳ app/controllers/coins_controller.rb:5:in `index'
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (1.65ms)
+Completed 200 OK in 4ms (Views: 3.3ms | ActiveRecord: 0.3ms | Allocations: 3147)
+
+
+Started GET "/coins/" for ::1 at 2020-07-09 23:46:15 -0400
+Processing by CoinsController#index as */*
+  [1m[36mCoin Load (0.2ms)[0m  [1m[34mSELECT "coins".* FROM "coins"[0m
+  ↳ app/controllers/coins_controller.rb:5:in `index'
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (2.34ms)
+Completed 200 OK in 4ms (Views: 3.9ms | ActiveRecord: 0.2ms | Allocations: 3147)
+
+
+Started GET "/coins/" for ::1 at 2020-07-09 23:46:15 -0400
+Processing by CoinsController#index as */*
+  [1m[36mCoin Load (0.2ms)[0m  [1m[34mSELECT "coins".* FROM "coins"[0m
+  ↳ app/controllers/coins_controller.rb:5:in `index'
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (1.37ms)
+Completed 200 OK in 3ms (Views: 3.0ms | ActiveRecord: 0.2ms | Allocations: 3147)
+
+
+Started GET "/coins/" for ::1 at 2020-07-09 23:46:15 -0400
+Processing by CoinsController#index as */*
+  [1m[36mCoin Load (0.3ms)[0m  [1m[34mSELECT "coins".* FROM "coins"[0m
+  ↳ app/controllers/coins_controller.rb:5:in `index'
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (1.62ms)
+Completed 200 OK in 4ms (Views: 3.6ms | ActiveRecord: 0.3ms | Allocations: 3147)
+
+
+Started GET "/coins/" for ::1 at 2020-07-09 23:46:24 -0400
+Processing by CoinsController#index as */*
+  [1m[36mCoin Load (0.2ms)[0m  [1m[34mSELECT "coins".* FROM "coins"[0m
+  ↳ app/controllers/coins_controller.rb:5:in `index'
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (1.36ms)
+Completed 200 OK in 3ms (Views: 2.7ms | ActiveRecord: 0.2ms | Allocations: 3147)
+
+
+Started GET "/coins/" for ::1 at 2020-07-09 23:46:24 -0400
+Processing by CoinsController#index as */*
+  [1m[36mCoin Load (0.2ms)[0m  [1m[34mSELECT "coins".* FROM "coins"[0m
+  ↳ app/controllers/coins_controller.rb:5:in `index'
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (1.46ms)
+Completed 200 OK in 3ms (Views: 2.8ms | ActiveRecord: 0.2ms | Allocations: 3147)
+
+
+Started GET "/coins/" for ::1 at 2020-07-09 23:46:25 -0400
+Processing by CoinsController#index as */*
+  [1m[36mCoin Load (0.2ms)[0m  [1m[34mSELECT "coins".* FROM "coins"[0m
+  ↳ app/controllers/coins_controller.rb:5:in `index'
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (1.32ms)
+Completed 200 OK in 3ms (Views: 2.7ms | ActiveRecord: 0.2ms | Allocations: 3147)
+
+
+Started GET "/coins/" for ::1 at 2020-07-09 23:46:25 -0400
+Processing by CoinsController#index as */*
+  [1m[36mCoin Load (0.3ms)[0m  [1m[34mSELECT "coins".* FROM "coins"[0m
+  ↳ app/controllers/coins_controller.rb:5:in `index'
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (1.75ms)
+Completed 200 OK in 4ms (Views: 3.9ms | ActiveRecord: 0.3ms | Allocations: 3148)
+
+
+Started GET "/coins/" for ::1 at 2020-07-09 23:49:06 -0400
+Processing by CoinsController#index as */*
+  [1m[36mCoin Load (0.3ms)[0m  [1m[34mSELECT "coins".* FROM "coins"[0m
+  ↳ app/controllers/coins_controller.rb:5:in `index'
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (1.61ms)
+Completed 200 OK in 4ms (Views: 3.6ms | ActiveRecord: 0.3ms | Allocations: 3147)
+
+
+Started GET "/coins/" for ::1 at 2020-07-09 23:49:06 -0400
+Processing by CoinsController#index as */*
+  [1m[36mCoin Load (0.2ms)[0m  [1m[34mSELECT "coins".* FROM "coins"[0m
+  ↳ app/controllers/coins_controller.rb:5:in `index'
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (1.4ms)
+Completed 200 OK in 3ms (Views: 2.8ms | ActiveRecord: 0.2ms | Allocations: 3147)
+
+
+Started GET "/coins/" for ::1 at 2020-07-09 23:49:48 -0400
+Processing by CoinsController#index as */*
+  [1m[36mCoin Load (0.3ms)[0m  [1m[34mSELECT "coins".* FROM "coins"[0m
+  ↳ app/controllers/coins_controller.rb:5:in `index'
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (1.64ms)
+Completed 200 OK in 4ms (Views: 3.2ms | ActiveRecord: 0.3ms | Allocations: 3147)
+
+
+Started GET "/coins/" for ::1 at 2020-07-09 23:49:48 -0400
+Processing by CoinsController#index as */*
+  [1m[36mCoin Load (0.3ms)[0m  [1m[34mSELECT "coins".* FROM "coins"[0m
+  ↳ app/controllers/coins_controller.rb:5:in `index'
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (1.39ms)
+Completed 200 OK in 3ms (Views: 2.9ms | ActiveRecord: 0.3ms | Allocations: 3147)
+
+
+Started GET "/coins/" for ::1 at 2020-07-09 23:49:54 -0400
+Processing by CoinsController#index as */*
+  [1m[36mCoin Load (0.4ms)[0m  [1m[34mSELECT "coins".* FROM "coins"[0m
+  ↳ app/controllers/coins_controller.rb:5:in `index'
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (8.31ms)
+Completed 200 OK in 10ms (Views: 9.7ms | ActiveRecord: 0.4ms | Allocations: 3150)
+
+
+Started GET "/coins/" for ::1 at 2020-07-09 23:49:54 -0400
+Processing by CoinsController#index as */*
+  [1m[36mCoin Load (0.3ms)[0m  [1m[34mSELECT "coins".* FROM "coins"[0m
+  ↳ app/controllers/coins_controller.rb:5:in `index'
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (1.41ms)
+Completed 200 OK in 4ms (Views: 3.1ms | ActiveRecord: 0.3ms | Allocations: 3147)
+
+
+Started GET "/coins/" for ::1 at 2020-07-09 23:49:58 -0400
+Processing by CoinsController#index as */*
+  [1m[36mCoin Load (0.4ms)[0m  [1m[34mSELECT "coins".* FROM "coins"[0m
+  ↳ app/controllers/coins_controller.rb:5:in `index'
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (1.98ms)
+Completed 200 OK in 5ms (Views: 4.0ms | ActiveRecord: 0.4ms | Allocations: 3147)
+
+
+Started GET "/coins/" for ::1 at 2020-07-09 23:49:58 -0400
+Processing by CoinsController#index as */*
+  [1m[36mCoin Load (0.3ms)[0m  [1m[34mSELECT "coins".* FROM "coins"[0m
+  ↳ app/controllers/coins_controller.rb:5:in `index'
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (1.75ms)
+Completed 200 OK in 4ms (Views: 3.8ms | ActiveRecord: 0.3ms | Allocations: 3147)
+
+
+Started GET "/coins/" for ::1 at 2020-07-10 00:12:40 -0400
+Processing by CoinsController#index as */*
+  [1m[36mCoin Load (0.4ms)[0m  [1m[34mSELECT "coins".* FROM "coins"[0m
+  ↳ app/controllers/coins_controller.rb:5:in `index'
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (1.37ms)
+Completed 200 OK in 3ms (Views: 2.8ms | ActiveRecord: 0.4ms | Allocations: 3229)
+
+
+Started POST "/coins/" for ::1 at 2020-07-10 00:12:50 -0400
+Processing by CoinsController#create as JSON
+  Parameters: {"name"=>"", "tickerSymbol"=>"", "tickerImage"=>"", "landingPage"=>"", "status"=>"", "color"=>"#000000", "balance"=>"", "coin"=>{"name"=>"", "status"=>"", "color"=>"#000000", "balance"=>""}}
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/coins_controller.rb:9:in `create'
+  [1m[36mCoin Create (0.5ms)[0m  [1m[32mINSERT INTO "coins" ("name", "ticker_symbol", "ticker_image", "landing_page", "status", "color", "balance", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9) RETURNING "id"[0m  [["name", ""], ["ticker_symbol", ""], ["ticker_image", ""], ["landing_page", ""], ["status", ""], ["color", "#000000"], ["balance", 0.0], ["created_at", "2020-07-10 04:12:50.840507"], ["updated_at", "2020-07-10 04:12:50.840507"]]
+  ↳ app/controllers/coins_controller.rb:9:in `create'
+  [1m[35m (0.8ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/coins_controller.rb:9:in `create'
+[active_model_serializers] Rendered CoinSerializer with ActiveModelSerializers::Adapter::Attributes (0.2ms)
+Completed 200 OK in 5ms (Views: 0.5ms | ActiveRecord: 1.4ms | Allocations: 2684)
+
+
+Started DELETE "/coins/75" for ::1 at 2020-07-10 00:12:55 -0400
+Processing by CoinsController#destroy as */*
+  Parameters: {"id"=>"75"}
+  [1m[36mCoin Load (0.3ms)[0m  [1m[34mSELECT "coins".* FROM "coins" WHERE "coins"."id" = $1 LIMIT $2[0m  [["id", 75], ["LIMIT", 1]]
+  ↳ app/controllers/coins_controller.rb:26:in `destroy'
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/coins_controller.rb:27:in `destroy'
+  [1m[36mCoin Destroy (0.2ms)[0m  [1m[31mDELETE FROM "coins" WHERE "coins"."id" = $1[0m  [["id", 75]]
+  ↳ app/controllers/coins_controller.rb:27:in `destroy'
+  [1m[35m (0.5ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/coins_controller.rb:27:in `destroy'
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Hash (0.05ms)
+Completed 200 OK in 4ms (Views: 0.3ms | ActiveRecord: 1.2ms | Allocations: 2613)
+
+
+Started GET "/coins/" for ::1 at 2020-07-10 01:14:20 -0400
+Processing by CoinsController#index as */*
+  [1m[36mCoin Load (0.4ms)[0m  [1m[34mSELECT "coins".* FROM "coins"[0m
+  ↳ app/controllers/coins_controller.rb:5:in `index'
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (1.34ms)
+Completed 200 OK in 3ms (Views: 2.7ms | ActiveRecord: 0.4ms | Allocations: 3229)
+
+
+Started GET "/coins/" for ::1 at 2020-07-10 01:14:48 -0400
+Processing by CoinsController#index as */*
+  [1m[36mCoin Load (0.3ms)[0m  [1m[34mSELECT "coins".* FROM "coins"[0m
+  ↳ app/controllers/coins_controller.rb:5:in `index'
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (1.48ms)
+Completed 200 OK in 3ms (Views: 3.0ms | ActiveRecord: 0.3ms | Allocations: 3147)
+
+
+Started GET "/coins/" for ::1 at 2020-07-10 01:15:16 -0400
+Processing by CoinsController#index as */*
+  [1m[36mCoin Load (0.4ms)[0m  [1m[34mSELECT "coins".* FROM "coins"[0m
+  ↳ app/controllers/coins_controller.rb:5:in `index'
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (1.76ms)
+Completed 200 OK in 4ms (Views: 3.8ms | ActiveRecord: 0.4ms | Allocations: 3147)
+
+
+Started GET "/coins/" for ::1 at 2020-07-10 01:15:16 -0400
+Processing by CoinsController#index as */*
+  [1m[36mCoin Load (0.4ms)[0m  [1m[34mSELECT "coins".* FROM "coins"[0m
+  ↳ app/controllers/coins_controller.rb:5:in `index'
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (1.44ms)
+Completed 200 OK in 4ms (Views: 3.4ms | ActiveRecord: 0.4ms | Allocations: 3147)
+
+
+Started GET "/coins/" for ::1 at 2020-07-10 01:16:03 -0400
+Processing by CoinsController#index as */*
+  [1m[36mCoin Load (0.3ms)[0m  [1m[34mSELECT "coins".* FROM "coins"[0m
+  ↳ app/controllers/coins_controller.rb:5:in `index'
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (1.46ms)
+Completed 200 OK in 3ms (Views: 2.9ms | ActiveRecord: 0.3ms | Allocations: 3147)
+
+
+Started GET "/coins/" for ::1 at 2020-07-10 01:16:03 -0400
+Processing by CoinsController#index as */*
+  [1m[36mCoin Load (0.3ms)[0m  [1m[34mSELECT "coins".* FROM "coins"[0m
+  ↳ app/controllers/coins_controller.rb:5:in `index'
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (1.48ms)
+Completed 200 OK in 3ms (Views: 3.0ms | ActiveRecord: 0.3ms | Allocations: 3147)
+
+
+Started GET "/coins/" for ::1 at 2020-07-10 01:16:10 -0400
+Processing by CoinsController#index as */*
+  [1m[36mCoin Load (0.3ms)[0m  [1m[34mSELECT "coins".* FROM "coins"[0m
+  ↳ app/controllers/coins_controller.rb:5:in `index'
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (1.66ms)
+Completed 200 OK in 4ms (Views: 3.1ms | ActiveRecord: 0.3ms | Allocations: 3147)
+
+
+Started GET "/coins/" for ::1 at 2020-07-10 01:16:10 -0400
+Processing by CoinsController#index as */*
+  [1m[36mCoin Load (0.5ms)[0m  [1m[34mSELECT "coins".* FROM "coins"[0m
+  ↳ app/controllers/coins_controller.rb:5:in `index'
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (1.56ms)
+Completed 200 OK in 10ms (Views: 9.8ms | ActiveRecord: 0.5ms | Allocations: 3150)
+
+
+Started GET "/coins/" for ::1 at 2020-07-10 01:16:23 -0400
+Processing by CoinsController#index as */*
+  [1m[36mCoin Load (0.3ms)[0m  [1m[34mSELECT "coins".* FROM "coins"[0m
+  ↳ app/controllers/coins_controller.rb:5:in `index'
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (1.84ms)
+Completed 200 OK in 4ms (Views: 3.8ms | ActiveRecord: 0.3ms | Allocations: 3147)
+
+
+Started GET "/coins/" for ::1 at 2020-07-10 01:16:23 -0400
+Processing by CoinsController#index as */*
+  [1m[36mCoin Load (0.4ms)[0m  [1m[34mSELECT "coins".* FROM "coins"[0m
+  ↳ app/controllers/coins_controller.rb:5:in `index'
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (1.55ms)
+Completed 200 OK in 4ms (Views: 3.2ms | ActiveRecord: 0.4ms | Allocations: 3147)
+
+
+Started GET "/coins/" for ::1 at 2020-07-10 01:16:24 -0400
+Processing by CoinsController#index as */*
+  [1m[36mCoin Load (0.2ms)[0m  [1m[34mSELECT "coins".* FROM "coins"[0m
+  ↳ app/controllers/coins_controller.rb:5:in `index'
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (1.69ms)
+Completed 200 OK in 4ms (Views: 3.5ms | ActiveRecord: 0.2ms | Allocations: 3147)
+
+
+Started GET "/coins/" for ::1 at 2020-07-10 01:16:24 -0400
+Processing by CoinsController#index as */*
+  [1m[36mCoin Load (0.3ms)[0m  [1m[34mSELECT "coins".* FROM "coins"[0m
+  ↳ app/controllers/coins_controller.rb:5:in `index'
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (1.49ms)
+Completed 200 OK in 4ms (Views: 3.0ms | ActiveRecord: 0.3ms | Allocations: 3147)
+
+

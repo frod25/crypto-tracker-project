@@ -30,4 +30,4 @@ The `+` button next to the search button triggers the form to add a new cryptocu
 
 Clicking on a coin renders a small card for you with some new information that you don't remember entering. How do we get the price, the market cap... AND... what your amount held is worth in USD? Oh by calling from the [nomics API](https://p.nomics.com/cryptocurrency-bitcoin-api) for Bitcoin and other Cryptocurrency. It has the information for 8,735 tokens across 309 exchanges.
 
-But you might find yourself at a point where you're no longer interested in a cryptocurrency. You diversified your portfolio but would actually like to just sell it all, buy more Ethereum. You find Cryptokitties to be a better store of value. Clicking delete will remove the coin from your list, and the database. 
+But you might find yourself at a point where you're no longer interested in a cryptocurrency. You diversified your portfolio but would actually like to just sell it all, buy more Ethereum. You find Cryptokitties to be a better store of value. Clicking delete will remove the coin from your list, and the database. You no longer track this one.
