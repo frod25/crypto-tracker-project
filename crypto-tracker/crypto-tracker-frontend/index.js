@@ -183,7 +183,8 @@ const renderPriceInfo = (coinData, balance) => {
 
 
   // dollarValue.textContent = `$${calcValue(balance, roundedPrice)}`
-  marketCapVal.textContent = `${coinData.market_cap}`
+
+  marketCapVal.textContent = `$${(parseInt(coinData.market_cap)).toLocaleString('en')}`
 }
 
 // const updateCoinData = ()
